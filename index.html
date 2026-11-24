@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYNAPSE AI — The Future of Intelligence | Advanced Neural Research Laboratory</title>
+  <meta name="description" content="SYNAPSE AI is a frontier artificial intelligence research laboratory engineering deterministic reasoning, multimodal cognition, and next-generation neural architectures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+  <!-- System Preloader -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-glyph">
+        <svg viewBox="0 0 100 100" class="preloader-svg">
+          <circle cx="50" cy="50" r="44" class="ring-track"></circle>
+          <circle cx="50" cy="50" r="44" class="ring-progress" id="preloader-ring"></circle>
+          <polygon points="50,22 74,64 26,64" class="inner-triangle"></polygon>
+          <circle cx="50" cy="50" r="6" class="center-core"></circle>
+        </svg>
+      </div>
+      <div class="preloader-brand">SYNAPSE<span>AI</span></div>
+      <div class="preloader-status">
+        <span class="status-indicator"></span>
+        <span id="preloader-text">INITIALIZING NEURAL FABRIC...</span>
+      </div>
+      <div class="preloader-counter" id="preloader-counter">000%</div>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-diagnostics">
+        <span>TENSOR CORE: ACTIVE</span>
+        <span>LATENT SPACES: SYNCHRONIZED</span>
+        <span>DETERMINISM: 99.999%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient Custom Cursor Follower -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-aura" id="cursor-aura" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Background Animated Precision Grid & Particle Canvas -->
+  <div class="background-grid" aria-hidden="true"></div>
+  <canvas id="ambient-particles" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Global Header Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo" aria-label="SYNAPSE AI Home">
+        <span class="logo-icon">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+            <polygon points="18,8 27,24 9,24" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <circle cx="18" cy="18" r="3.5" fill="currentColor"/>
+            <line x1="18" y1="2" x2="18" y2="7" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="18" y1="29" x2="18" y2="34" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="logo-text">SYNAPSE<span class="logo-accent">AI</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#intelligence" class="nav-link">Intelligence</a></li>
+          <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="#technology" class="nav-link">Technology</a></li>
+          <li class="nav-item"><a href="#applications" class="nav-link">Applications</a></li>
+          <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Auxiliary Controls -->
+      <div class="header-actions">
+        <!-- Audio Synthesizer Haptic Toggle -->
+        <button id="audio-toggle" class="btn-icon" aria-label="Toggle Acoustic Synthesizer Haptics" title="Acoustic Synthesizer Feedback">
+          <svg class="audio-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <svg class="audio-icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none;">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <span class="sr-only">Toggle Sound</span>
+        </button>
+
+        <!-- System Status Pill -->
+        <div class="system-status-pill" title="Hardware Cluster Telemetry">
+          <span class="status-pulse"></span>
+          <span class="status-label">FABRIC NOMINAL</span>
+        </div>
+
+        <!-- Terminal Quick Action -->
+        <a href="#interactive-demo" class="btn-minimal header-cta">
+          <span>CONSOLE</span>
+          <span class="cta-arrow">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-meta">
+        <span class="mono-label">SYSTEM NAVIGATION // REV 4.2</span>
+        <span class="mono-label">COORDINATES: 37.7749° N, 122.4194° W</span>
+      </div>
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link"><span class="nav-num">01</span><span class="nav-title">Home</span></a></li>
+          <li><a href="#about" class="mobile-nav-link"><span class="nav-num">02</span><span class="nav-title">About</span></a></li>
+          <li><a href="#intelligence" class="mobile-nav-link"><span class="nav-num">03</span><span class="nav-title">Intelligence</span></a></li>
+          <li><a href="#products" class="mobile-nav-link"><span class="nav-num">04</span><span class="nav-title">Products</span></a></li>
+          <li><a href="#technology" class="mobile-nav-link"><span class="nav-num">05</span><span class="nav-title">Technology</span></a></li>
+          <li><a href="#applications" class="mobile-nav-link"><span class="nav-num">06</span><span class="nav-title">Applications</span></a></li>
+          <li><a href="#research" class="mobile-nav-link"><span class="nav-num">07</span><span class="nav-title">Research</span></a></li>
+          <li><a href="#contact" class="mobile-nav-link"><span class="nav-num">08</span><span class="nav-title">Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <div class="telemetry-compact">
+          <span>LATENCY: 0.12ms</span>
+          <span>WEIGHTS: 1.4T</span>
+          <span>DETERMINISM: 99.999%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1: CINEMATIC HERO SECTION -->
+    <section id="hero" class="hero-section" aria-label="Hero Section">
+      <div class="hero-background-vignette" aria-hidden="true"></div>
+      
+      <!-- 3D Metallic Neural Sphere / WebGL Canvas -->
+      <div class="hero-canvas-container" id="hero-canvas-container" aria-hidden="true">
+        <canvas id="neural-sphere-canvas" class="sphere-canvas"></canvas>
+        <div class="sphere-glow-layer"></div>
+        <div class="sphere-specular-ring"></div>
+        <div class="hero-orbital-marker" id="orbital-marker">
+          <div class="marker-reticle"></div>
+          <div class="marker-data">
+            <span class="marker-title">HARMONIC NODE 01</span>
+            <span class="marker-val" id="marker-coord">θ: 42.18° | φ: 108.92°</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content container">
+        <div class="hero-header-badge reveal-elem">
+          <span class="badge-index">SYS_INITIALIZED</span>
+          <span class="badge-divider">/</span>
+          <span class="badge-text">AUTONOMOUS COGNITIVE SUBSTRATE</span>
+        </div>
+
+        <h1 class="hero-headline reveal-elem" data-split-text>
+          Intelligence, <br>
+          <span class="headline-gradient">Reimagined.</span>
+        </h1>
+
+        <p class="hero-statement reveal-elem">
+          Pioneering deterministic reasoning, multimodal cognition, and next-generation neural architectures. We engineer non-probabilistic artificial superintelligence designed to unravel complexity at quantum and planetary scale.
+        </p>
+
+        <div class="hero-actions reveal-elem">
+          <a href="#technology" class="btn-primary" data-sound="click">
+            <span class="btn-shine"></span>
+            <span class="btn-text">EXPLORE TECHNOLOGY</span>
+            <span class="btn-icon-arrow">→</span>
+          </a>
+          <a href="#products" class="btn-secondary" data-sound="click">
+            <span class="btn-text">DISCOVER PRODUCTS</span>
+            <span class="btn-border-tracer"></span>
+          </a>
+        </div>
+
+        <!-- Hero Telemetry Matrix -->
+        <div class="hero-telemetry-bar reveal-elem">
+          <div class="telemetry-item">
+            <span class="telemetry-label">INFERENCE LATENCY</span>
+            <span class="telemetry-value" id="val-latency">0.12<span class="telemetry-unit">ms</span></span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">ACTIVE PARAMETERS</span>
+            <span class="telemetry-value">1.40<span class="telemetry-unit">T</span></span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">DETERMINISTIC FIDELITY</span>
+            <span class="telemetry-value">99.999<span class="telemetry-unit">%</span></span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">COGNITIVE NODES</span>
+            <span class="telemetry-value">48<span class="telemetry-unit">GLOBAL</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Cue -->
+      <a href="#about" class="scroll-down-cue" aria-label="Scroll down to About section">
+        <span class="cue-label">SCROLL TO DISCOVER</span>
+        <span class="cue-line"></span>
+      </a>
+    </section>
+
+    <!-- SECTION 2: ABOUT SYNAPSE AI -->
+    <section id="about" class="section-about section-padding" aria-label="About SYNAPSE AI">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 01 — THE LABORATORY
+          </div>
+          <h2 class="section-title reveal-elem">The Architecture of Higher Thought.</h2>
+          <p class="section-lead reveal-elem">
+            SYNAPSE AI was founded on a fundamental realization: contemporary artificial intelligence is constrained by stochastic approximation. We build deterministic neural architectures that reason with mathematical precision.
+          </p>
+        </div>
+
+        <!-- Pillar Grid (Mission, Vision, Philosophy, Approach) -->
+        <div class="about-pillars-grid">
+          <!-- Card 1: Mission -->
+          <div class="pillar-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="pillar-header">
+              <span class="pillar-num mono-label">01.1</span>
+              <span class="pillar-glyph">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                  <path d="M2 12h20"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="pillar-title">Mission</h3>
+            <p class="pillar-body">
+              To construct the cognitive foundation of artificial superintelligence through self-verifying neural topologies, eliminating hallucinations and enabling mission-critical reasoning across science and industry.
+            </p>
+            <div class="pillar-metric">
+              <span class="metric-val">100%</span>
+              <span class="metric-desc">Verifiable Output Graphs</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Vision -->
+          <div class="pillar-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="pillar-header">
+              <span class="pillar-num mono-label">01.2</span>
+              <span class="pillar-glyph">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="pillar-title">Vision</h3>
+            <p class="pillar-body">
+              A reality where synthetic cognitive entities collaborate with humanity to solve foundational inquiries: quantum gravity, structural biology, thermonuclear fusion, and galactic exploration.
+            </p>
+            <div class="pillar-metric">
+              <span class="metric-val">10⁻¹⁵s</span>
+              <span class="metric-desc">Sub-Planck Simulation Core</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Innovation Philosophy -->
+          <div class="pillar-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="pillar-header">
+              <span class="pillar-num mono-label">01.3</span>
+              <span class="pillar-glyph">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="pillar-title">Innovation Philosophy</h3>
+            <p class="pillar-body">
+              Complexity must be met with radical elegance. We synthesize biological neurodynamics, category theory, and non-Euclidean geometry to build hardware-native neural algorithms that scale exponentially.
+            </p>
+            <div class="pillar-metric">
+              <span class="metric-val">100x</span>
+              <span class="metric-desc">Compute Density Multiplication</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Approach to AI -->
+          <div class="pillar-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="pillar-header">
+              <span class="pillar-num mono-label">01.4</span>
+              <span class="pillar-glyph">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <line x1="3" y1="9" x2="21" y2="9"/>
+                  <line x1="9" y1="21" x2="9" y2="9"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="pillar-title">Deterministic Approach</h3>
+            <p class="pillar-body">
+              Rather than training monolithic black boxes, we develop modular, symbolic-neural neurocomposers. Every thought step is traced, bound by formal mathematical proofs, and provably aligned.
+            </p>
+            <div class="pillar-metric">
+              <span class="metric-val">0.00%</span>
+              <span class="metric-desc">Semantic Drift Rate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architectural Statement Banner -->
+        <div class="about-quote-banner reveal-elem">
+          <div class="quote-border-line"></div>
+          <blockquote class="architectural-quote">
+            "We do not teach computers to guess what words should follow. We construct computational organisms capable of discerning absolute truth from noise."
+          </blockquote>
+          <div class="quote-attribution mono-label">
+            — DR. ELENA VANCE, CHIEF SCIENTIST & CO-FOUNDER
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INTELLIGENCE & NEURAL ARCHITECTURE -->
+    <section id="intelligence" class="section-intelligence section-padding" aria-label="Neural Architecture">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 02 — THE COGNITIVE FABRIC
+          </div>
+          <h2 class="section-title reveal-elem">Neural Topology & Data Ingestion.</h2>
+          <p class="section-lead reveal-elem">
+            Examine the interconnected layers powering the SYNAPSE architecture. Select any node in the pipeline to inspect real-time throughput telemetry and mathematical formulations.
+          </p>
+        </div>
+
+        <!-- Interactive Diagram Component -->
+        <div class="architecture-diagram-wrapper reveal-elem">
+          <div class="diagram-canvas-container">
+            <svg id="architecture-svg" class="architecture-svg" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#444" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#fff" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#444" stop-opacity="0.3"/>
+                </linearGradient>
+                <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="4" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Connection Lines / Data Flow Pipes -->
+              <g class="diagram-connections">
+                <path id="path-0-1" d="M 160 160 C 260 160, 260 260, 360 260" class="wire-path"/>
+                <path id="path-0-2" d="M 160 360 C 260 360, 260 260, 360 260" class="wire-path"/>
+                <path id="path-1-3" d="M 440 260 C 530 260, 530 160, 620 160" class="wire-path"/>
+                <path id="path-1-4" d="M 440 260 C 530 260, 530 360, 620 360" class="wire-path"/>
+                <path id="path-3-5" d="M 700 160 C 780 160, 780 260, 860 260" class="wire-path"/>
+                <path id="path-4-5" d="M 700 360 C 780 360, 780 260, 860 260" class="wire-path"/>
+              </g>
+
+              <!-- Animated Data Pulse Packets -->
+              <g class="pulse-packets">
+                <circle r="3.5" fill="#ffffff" class="pulse-dot">
+                  <animateMotion dur="3.2s" repeatCount="indefinite" path="M 160 160 C 260 160, 260 260, 360 260"/>
+                </circle>
+                <circle r="3.5" fill="#ffffff" class="pulse-dot">
+                  <animateMotion dur="2.8s" repeatCount="indefinite" path="M 160 360 C 260 360, 260 260, 360 260"/>
+                </circle>
+                <circle r="3.5" fill="#ffffff" class="pulse-dot">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" path="M 440 260 C 530 260, 530 160, 620 160"/>
+                </circle>
+                <circle r="3.5" fill="#ffffff" class="pulse-dot">
+                  <animateMotion dur="3.0s" repeatCount="indefinite" path="M 440 260 C 530 260, 530 360, 620 360"/>
+                </circle>
+                <circle r="3.5" fill="#ffffff" class="pulse-dot">
+                  <animateMotion dur="2.6s" repeatCount="indefinite" path="M 700 160 C 780 160, 780 260, 860 260"/>
+                </circle>
+                <circle r="3.5" fill="#ffffff" class="pulse-dot">
+                  <animateMotion dur="3.4s" repeatCount="indefinite" path="M 700 360 C 780 360, 780 260, 860 260"/>
+                </circle>
+              </g>
+
+              <!-- Node 1: Data Ingestion -->
+              <g class="diagram-node active" data-node="ingestion" transform="translate(120, 160)">
+                <circle r="44" class="node-outer-halo"/>
+                <circle r="36" class="node-body"/>
+                <circle r="32" class="node-inner-ring"/>
+                <text y="5" text-anchor="middle" class="node-icon-text">01</text>
+                <text y="58" text-anchor="middle" class="node-caption">DATA INGESTION</text>
+              </g>
+
+              <!-- Node 2: Tensor Normalization -->
+              <g class="diagram-node" data-node="tensors" transform="translate(120, 360)">
+                <circle r="44" class="node-outer-halo"/>
+                <circle r="36" class="node-body"/>
+                <circle r="32" class="node-inner-ring"/>
+                <text y="5" text-anchor="middle" class="node-icon-text">02</text>
+                <text y="58" text-anchor="middle" class="node-caption">MACHINE LEARNING</text>
+              </g>
+
+              <!-- Node 3: Neural Networks Core -->
+              <g class="diagram-node" data-node="core" transform="translate(400, 260)">
+                <circle r="52" class="node-outer-halo core-halo"/>
+                <circle r="42" class="node-body core-body"/>
+                <circle r="36" class="node-inner-ring core-ring"/>
+                <polygon points="400,242 416,270 384,270" transform="translate(-400, -257)" class="core-glyph"/>
+                <text y="68" text-anchor="middle" class="node-caption">NEURAL NETWORKS</text>
+              </g>
+
+              <!-- Node 4: Computer Vision -->
+              <g class="diagram-node" data-node="vision" transform="translate(660, 160)">
+                <circle r="44" class="node-outer-halo"/>
+                <circle r="36" class="node-body"/>
+                <circle r="32" class="node-inner-ring"/>
+                <text y="5" text-anchor="middle" class="node-icon-text">04</text>
+                <text y="58" text-anchor="middle" class="node-caption">COMPUTER VISION</text>
+              </g>
+
+              <!-- Node 5: Natural Language Processing -->
+              <g class="diagram-node" data-node="nlp" transform="translate(660, 360)">
+                <circle r="44" class="node-outer-halo"/>
+                <circle r="36" class="node-body"/>
+                <circle r="32" class="node-inner-ring"/>
+                <text y="5" text-anchor="middle" class="node-icon-text">05</text>
+                <text y="58" text-anchor="middle" class="node-caption">NATURAL LANGUAGE</text>
+              </g>
+
+              <!-- Node 6: Intelligent Automation -->
+              <g class="diagram-node" data-node="actuation" transform="translate(900, 260)">
+                <circle r="48" class="node-outer-halo"/>
+                <circle r="38" class="node-body"/>
+                <circle r="34" class="node-inner-ring"/>
+                <text y="5" text-anchor="middle" class="node-icon-text">06</text>
+                <text y="64" text-anchor="middle" class="node-caption">INTELLIGENT AUTOMATION</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Node Telemetry Inspector Card -->
+          <div class="node-inspector-panel" id="node-inspector">
+            <div class="inspector-header">
+              <span class="mono-label" id="insp-id">SUBSYSTEM // ARCH-NODE-01</span>
+              <span class="status-badge" id="insp-status">STATUS: ONLINE</span>
+            </div>
+            <h3 class="inspector-title" id="insp-title">Data Ingestion & Tensor Streams</h3>
+            <p class="inspector-desc" id="insp-desc">
+              High-frequency multi-modal ingestion pipeline capable of normalizing heterogeneous data streams across visual, symbolic, acoustic, and geometric sensor arrays with sub-microsecond serialization.
+            </p>
+            <div class="inspector-grid">
+              <div class="insp-stat">
+                <span class="stat-lbl">THROUGHPUT</span>
+                <span class="stat-num" id="insp-stat-1">128.4 GB/s</span>
+              </div>
+              <div class="insp-stat">
+                <span class="stat-lbl">LATENCY</span>
+                <span class="stat-num" id="insp-stat-2">0.03 ms</span>
+              </div>
+              <div class="insp-stat">
+                <span class="stat-lbl">FIDELITY</span>
+                <span class="stat-num" id="insp-stat-3">99.999%</span>
+              </div>
+            </div>
+            <div class="inspector-formula mono-label" id="insp-formula">
+              T(x) = ∫ Ψ(x, t) · e^(-iωt) dt ⊗ W_norm
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: AI PRODUCTS AND SOLUTIONS -->
+    <section id="products" class="section-products section-padding" aria-label="AI Products and Solutions">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 03 — SYNAPSE SUITE
+          </div>
+          <h2 class="section-title reveal-elem">Engineered for Frontier Demands.</h2>
+          <p class="section-lead reveal-elem">
+            Modular enterprise AI platforms combining mathematical rigor, edge scalability, and autonomous synthesis.
+          </p>
+        </div>
+
+        <!-- 4 Product Cards Grid -->
+        <div class="products-grid">
+          <!-- Product 1: SYNAPSE VISION -->
+          <article class="product-card reveal-elem" data-product="vision">
+            <div class="card-glass-specular"></div>
+            <div class="product-meta">
+              <span class="product-cat mono-label">COMPUTER VISION</span>
+              <span class="product-version mono-label">v4.8 PRO</span>
+            </div>
+            <!-- Abstract Visual Generator: Canvas target tracking simulation -->
+            <div class="product-visual-stage">
+              <canvas class="card-visual-canvas" id="canvas-card-vision"></canvas>
+              <div class="visual-overlay-grid"></div>
+              <div class="visual-hud-tag mono-label">FPS: 240 // RESOLUTION: 8K SPATIAL</div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">SYNAPSE VISION</h3>
+              <p class="product-desc">
+                Sub-millimeter 3D spatial perception, volumetric scene reconstruction, and dynamic object trajectory forecasting at 240Hz.
+              </p>
+              <div class="product-specs-list">
+                <span>• Multi-spectral photon mapping</span>
+                <span>• 6-DoF zero-latency tracking</span>
+                <span>• Occlusion-invariant synthesis</span>
+              </div>
+              <button class="btn-product-explore" data-product="vision" data-sound="click">
+                <span>EXPLORE ARCHITECTURE</span>
+                <span class="arrow-glyph">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2: SYNAPSE CORE -->
+          <article class="product-card reveal-elem" data-product="core">
+            <div class="card-glass-specular"></div>
+            <div class="product-meta">
+              <span class="product-cat mono-label">REASONING PLATFORM</span>
+              <span class="product-version mono-label">v5.0 ULTRA</span>
+            </div>
+            <!-- Abstract Visual Generator: Neural logic lattice simulation -->
+            <div class="product-visual-stage">
+              <canvas class="card-visual-canvas" id="canvas-card-core"></canvas>
+              <div class="visual-overlay-grid"></div>
+              <div class="visual-hud-tag mono-label">TOPOLOGY: DETERMINISTIC GRAPH</div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">SYNAPSE CORE</h3>
+              <p class="product-desc">
+                Symbolic-neural reasoning platform executing formal mathematical inference, autonomous software verification, and hypothesis generation.
+              </p>
+              <div class="product-specs-list">
+                <span>• Formal proof synthesis</span>
+                <span>• Zero-hallucination guarantee</span>
+                <span>• 2M token context window</span>
+              </div>
+              <button class="btn-product-explore" data-product="core" data-sound="click">
+                <span>EXPLORE ARCHITECTURE</span>
+                <span class="arrow-glyph">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3: SYNAPSE VOICE -->
+          <article class="product-card reveal-elem" data-product="voice">
+            <div class="card-glass-specular"></div>
+            <div class="product-meta">
+              <span class="product-cat mono-label">VOICE INTELLIGENCE</span>
+              <span class="product-version mono-label">v3.4 NEURAL</span>
+            </div>
+            <!-- Abstract Visual Generator: Acoustic harmonic wave simulation -->
+            <div class="product-visual-stage">
+              <canvas class="card-visual-canvas" id="canvas-card-voice"></canvas>
+              <div class="visual-overlay-grid"></div>
+              <div class="visual-hud-tag mono-label">PHONETIC HARMONICS // 96kHz</div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">SYNAPSE VOICE</h3>
+              <p class="product-desc">
+                Ultra-low latency conversational acoustic intelligence with sub-audible micro-prosody, phonetic nuance, and 120-language fluency.
+              </p>
+              <div class="product-specs-list">
+                <span>• 45ms speech-to-speech loop</span>
+                <span>• Biometric tone modulation</span>
+                <span>• Acoustic noise-cancellation</span>
+              </div>
+              <button class="btn-product-explore" data-product="voice" data-sound="click">
+                <span>EXPLORE ARCHITECTURE</span>
+                <span class="arrow-glyph">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4: SYNAPSE ANALYTICS -->
+          <article class="product-card reveal-elem" data-product="analytics">
+            <div class="card-glass-specular"></div>
+            <div class="product-meta">
+              <span class="product-cat mono-label">INTELLIGENT DATA ANALYSIS</span>
+              <span class="product-version mono-label">v6.1 TENSOR</span>
+            </div>
+            <!-- Abstract Visual Generator: High-dimensional matrix stream simulation -->
+            <div class="product-visual-stage">
+              <canvas class="card-visual-canvas" id="canvas-card-analytics"></canvas>
+              <div class="visual-overlay-grid"></div>
+              <div class="visual-hud-tag mono-label">DIMENSIONALITY: 4096-D LATENT</div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">SYNAPSE ANALYTICS</h3>
+              <p class="product-desc">
+                Autonomous high-dimensional manifold analysis for financial equilibria, supply-chain resilience, and genomic anomaly detection.
+              </p>
+              <div class="product-specs-list">
+                <span>• 100M events/second ingestion</span>
+                <span>• Causal inference graphs</span>
+                <span>• Automated policy simulation</span>
+              </div>
+              <button class="btn-product-explore" data-product="analytics" data-sound="click">
+                <span>EXPLORE ARCHITECTURE</span>
+                <span class="arrow-glyph">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE AI DEMONSTRATION ("Experience Intelligence") -->
+    <section id="interactive-demo" class="section-demo section-padding" aria-label="Interactive AI Demonstration">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 04 — INTERACTIVE BENCHMARK
+          </div>
+          <h2 class="section-title reveal-elem">Experience Intelligence.</h2>
+          <p class="section-lead reveal-elem">
+            Interact with our simulated local neural emulator. Query reasoning modules, test mathematical proofs, and inspect live inference telemetry.
+          </p>
+        </div>
+
+        <div class="demo-terminal-wrapper reveal-elem">
+          <!-- Terminal Frame Header -->
+          <div class="terminal-topbar">
+            <div class="terminal-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="terminal-title mono-label">SYNAPSE-TERMINAL // NEURAL-EMULATOR-LOC-v4.2</div>
+            <div class="terminal-session-status">
+              <span class="status-glow"></span>
+              <span class="mono-label">READY</span>
+            </div>
+          </div>
+
+          <!-- Model Domain Selector Tabs -->
+          <div class="terminal-mode-selector">
+            <button class="mode-tab active" data-mode="reasoning" data-sound="click">
+              <span class="mode-icon">⬡</span>
+              <span>SYMBOLIC REASONING</span>
+            </button>
+            <button class="mode-tab" data-mode="vision" data-sound="click">
+              <span class="mode-icon">◈</span>
+              <span>VISION ENGINE</span>
+            </button>
+            <button class="mode-tab" data-mode="voice" data-sound="click">
+              <span class="mode-icon">≋</span>
+              <span>ACOUSTIC SYNTHESIS</span>
+            </button>
+            <button class="mode-tab" data-mode="analytics" data-sound="click">
+              <span class="mode-icon">▤</span>
+              <span>TENSOR ANALYTICS</span>
+            </button>
+          </div>
+
+          <!-- Prompt Pill Suggestions -->
+          <div class="prompt-pills-bar">
+            <span class="pills-label mono-label">PRESET VECTORS:</span>
+            <div class="pills-scroll-container">
+              <button class="prompt-pill" data-prompt="Explain deterministic neural graphs and why they eliminate hallucinations." data-sound="click">
+                Deterministic Graphs vs Hallucination
+              </button>
+              <button class="prompt-pill" data-prompt="Synthesize a sub-millimeter perception model for autonomous robotics." data-sound="click">
+                6-DoF Robotic Perception
+              </button>
+              <button class="prompt-pill" data-prompt="Provide a mathematical proof for verifiable cognitive alignment." data-sound="click">
+                Formal Proof Alignment
+              </button>
+              <button class="prompt-pill" data-prompt="Analyze the latency bottlenecks in 4096-dimensional tensor ingestion." data-sound="click">
+                Tensor Ingestion Bottlenecks
+              </button>
+            </div>
+          </div>
+
+          <!-- Terminal Conversation Stream -->
+          <div class="terminal-body" id="demo-terminal-body" role="log" aria-live="polite">
+            <!-- Initial Welcome Message -->
+            <div class="terminal-message message-synapse">
+              <div class="msg-header">
+                <span class="msg-avatar">SYNAPSE AI</span>
+                <span class="msg-time mono-label">EMULATOR v4.2 // READY</span>
+              </div>
+              <div class="msg-content">
+                <p>SYNAPSE Neural Emulator initialized. All 1.40 Trillion parameters mapped into high-dimensional cache. Choose a preset vector above or submit a technical query to test deterministic inference.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Inference Diagnostics Bar -->
+          <div class="terminal-diagnostics-bar">
+            <div class="diag-item">
+              <span class="diag-label">INFERENCE TIME:</span>
+              <span class="diag-value" id="diag-time">0.08 ms</span>
+            </div>
+            <div class="diag-item">
+              <span class="diag-label">TOKENS / SEC:</span>
+              <span class="diag-value" id="diag-tps">182.4</span>
+            </div>
+            <div class="diag-item">
+              <span class="diag-label">CONFIDENCE INDEX:</span>
+              <span class="diag-value" id="diag-conf">99.98%</span>
+            </div>
+            <div class="diag-item">
+              <span class="diag-label">VERIFICATION:</span>
+              <span class="diag-value status-verified" id="diag-ver">FORMAL_PROOF_PASS</span>
+            </div>
+          </div>
+
+          <!-- Terminal Input Area -->
+          <form id="demo-input-form" class="terminal-input-bar">
+            <span class="input-prompt-symbol">❯</span>
+            <input 
+              type="text" 
+              id="demo-user-input" 
+              class="terminal-input" 
+              placeholder="Query the SYNAPSE cognitive substrate... (e.g., 'Explain deterministic reasoning')"
+              autocomplete="off"
+              required
+            >
+            <div class="input-controls">
+              <button type="button" id="demo-clear-btn" class="btn-terminal-action" title="Clear Conversation" data-sound="click">
+                CLEAR
+              </button>
+              <button type="submit" id="demo-submit-btn" class="btn-terminal-submit" data-sound="click">
+                <span>INFER</span>
+                <span class="submit-glyph">↵</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- System Disclaimer Requirement -->
+          <div class="demo-system-notice mono-label">
+            <span class="notice-icon">ℹ</span>
+            <span>SYSTEM DISCLOSURE: Interactive local demonstration emulator. Synthesizes deterministic knowledge without remote server calls.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: TECHNOLOGY ARCHITECTURE BREAKDOWN -->
+    <section id="technology" class="section-tech-deep section-padding" aria-label="Technology Architecture Deep Dive">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 05 — CORE ADVANCEMENTS
+          </div>
+          <h2 class="section-title reveal-elem">Mathematical Substrates.</h2>
+          <p class="section-lead reveal-elem">
+            A comprehensive breakdown of the proprietary mathematical disciplines powering the SYNAPSE ecosystem.
+          </p>
+        </div>
+
+        <div class="tech-stack-grid">
+          <!-- Tech 1 -->
+          <div class="tech-card reveal-elem">
+            <div class="tech-card-header">
+              <span class="tech-num mono-label">TECH_01</span>
+              <span class="tech-tag">DATA PROCESSING</span>
+            </div>
+            <h3 class="tech-title">Tensor Streaming Engine</h3>
+            <p class="tech-desc">
+              Zero-copy shared memory architecture with custom SIMD vectorization routines for real-time ingest of high-throughput sensor telemetry.
+            </p>
+            <div class="tech-spec-bar">
+              <div class="tech-spec-row">
+                <span class="spec-k">Memory Bandwidth</span>
+                <span class="spec-v">3.2 TB/s</span>
+              </div>
+              <div class="tech-spec-row">
+                <span class="spec-k">Compression Ratio</span>
+                <span class="spec-v">14.2:1 Lossless</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech 2 -->
+          <div class="tech-card reveal-elem">
+            <div class="tech-card-header">
+              <span class="tech-num mono-label">TECH_02</span>
+              <span class="tech-tag">MACHINE LEARNING</span>
+            </div>
+            <h3 class="tech-title">Dynamic Neural Graphing</h3>
+            <p class="tech-desc">
+              Sub-graph dynamic compilation on runtime silicon. Nodes reconfigure topologies on-the-fly based on semantic complexity vectors.
+            </p>
+            <div class="tech-spec-bar">
+              <div class="tech-spec-row">
+                <span class="spec-k">JIT Recompile Latency</span>
+                <span class="spec-v">&lt; 15μs</span>
+              </div>
+              <div class="tech-spec-row">
+                <span class="spec-k">Sparsity Acceleration</span>
+                <span class="spec-v">88.4% Structured</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech 3 -->
+          <div class="tech-card reveal-elem">
+            <div class="tech-card-header">
+              <span class="tech-num mono-label">TECH_03</span>
+              <span class="tech-tag">NEURAL NETWORKS</span>
+            </div>
+            <h3 class="tech-title">Non-Euclidean Latents</h3>
+            <p class="tech-desc">
+              Hyperbolic geometry projection preserving hierarchical relational networks with exponential parameter compression.
+            </p>
+            <div class="tech-spec-bar">
+              <div class="tech-spec-row">
+                <span class="spec-k">Curvature Metric</span>
+                <span class="spec-v">-1.0 Poincaré</span>
+              </div>
+              <div class="tech-spec-row">
+                <span class="spec-k">Embedding Fidelity</span>
+                <span class="spec-v">99.98%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech 4 -->
+          <div class="tech-card reveal-elem">
+            <div class="tech-card-header">
+              <span class="tech-num mono-label">TECH_04</span>
+              <span class="tech-tag">COMPUTER VISION</span>
+            </div>
+            <h3 class="tech-title">Neural Radiance NeRF 4D</h3>
+            <p class="tech-desc">
+              Instant volumetric light field synthesis for 3D continuous spatiotemporal world models operating without prior bounding priors.
+            </p>
+            <div class="tech-spec-bar">
+              <div class="tech-spec-row">
+                <span class="spec-k">Temporal Refresh</span>
+                <span class="spec-v">240 Hz Continuous</span>
+              </div>
+              <div class="tech-spec-row">
+                <span class="spec-k">Spatial Resolution</span>
+                <span class="spec-v">Sub-millimeter</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech 5 -->
+          <div class="tech-card reveal-elem">
+            <div class="tech-card-header">
+              <span class="tech-num mono-label">TECH_05</span>
+              <span class="tech-tag">NATURAL LANGUAGE</span>
+            </div>
+            <h3 class="tech-title">Symbolic Logic Cores</h3>
+            <p class="tech-desc">
+              Hybrid neuro-symbolic grammar engines pairing dense transformer latents with formal First-Order Logic theorem provers.
+            </p>
+            <div class="tech-spec-bar">
+              <div class="tech-spec-row">
+                <span class="spec-k">Proof Verification</span>
+                <span class="spec-v">Deterministic SAT</span>
+              </div>
+              <div class="tech-spec-row">
+                <span class="spec-k">Semantic Precision</span>
+                <span class="spec-v">100% Verifiable</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech 6 -->
+          <div class="tech-card reveal-elem">
+            <div class="tech-card-header">
+              <span class="tech-num mono-label">TECH_06</span>
+              <span class="tech-tag">INTELLIGENT AUTOMATION</span>
+            </div>
+            <h3 class="tech-title">Autonomous Actuation Mesh</h3>
+            <p class="tech-desc">
+              Decentralized consensus protocol orchestrating millions of robotic and computational edge agents under guaranteed safety bounds.
+            </p>
+            <div class="tech-spec-bar">
+              <div class="tech-spec-row">
+                <span class="spec-k">Consensus Jitter</span>
+                <span class="spec-v">&lt; 0.05 ms</span>
+              </div>
+              <div class="tech-spec-row">
+                <span class="spec-k">Safety Boundary</span>
+                <span class="spec-v">Zero Fault Tolerance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: APPLICATIONS -->
+    <section id="applications" class="section-applications section-padding" aria-label="Applications Across Sectors">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 06 — IMPACT MATRIX
+          </div>
+          <h2 class="section-title reveal-elem">Planetary Scale Applications.</h2>
+          <p class="section-lead reveal-elem">
+            Deploying high-reliability neural architectures into critical sectors where hallucination is not an option.
+          </p>
+        </div>
+
+        <div class="apps-grid">
+          <!-- App 1: Healthcare -->
+          <div class="app-card reveal-elem">
+            <div class="app-card-bg-gradient"></div>
+            <div class="app-header">
+              <span class="app-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </span>
+              <span class="app-sector mono-label">SECTOR 01</span>
+            </div>
+            <h3 class="app-title">Healthcare & Oncology</h3>
+            <p class="app-desc">
+              Accelerating molecular ligand docking from months to seconds. Real-time sub-cellular genomic mutation tracking and automated robotic surgery assist.
+            </p>
+            <div class="app-metrics-footer">
+              <div class="app-m-col">
+                <span class="app-m-val">99.4%</span>
+                <span class="app-m-lbl">EARLY BIOMARKER ACCURACY</span>
+              </div>
+              <div class="app-m-col">
+                <span class="app-m-val">1000x</span>
+                <span class="app-m-lbl">MOLECULAR DOCKING ACCELERATION</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 2: Education -->
+          <div class="app-card reveal-elem">
+            <div class="app-card-bg-gradient"></div>
+            <div class="app-header">
+              <span class="app-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                  <path d="M6 6h10"/>
+                  <path d="M6 10h10"/>
+                </svg>
+              </span>
+              <span class="app-sector mono-label">SECTOR 02</span>
+            </div>
+            <h3 class="app-title">Adaptive Education</h3>
+            <p class="app-desc">
+              Cognitive neural mapping creating custom neuro-personalized learning pathways, translating multi-dimensional mathematical concepts dynamically for each mind.
+            </p>
+            <div class="app-metrics-footer">
+              <div class="app-m-col">
+                <span class="app-m-val">3.4x</span>
+                <span class="app-m-lbl">COMPREHENSION VELOCITY</span>
+              </div>
+              <div class="app-m-col">
+                <span class="app-m-val">120+</span>
+                <span class="app-m-lbl">SIMULTANEOUS TONGUES</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 3: Robotics -->
+          <div class="app-card reveal-elem">
+            <div class="app-card-bg-gradient"></div>
+            <div class="app-header">
+              <span class="app-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <rect x="3" y="11" width="18" height="10" rx="2"/>
+                  <circle cx="12" cy="5" r="2"/>
+                  <path d="M12 7v4"/>
+                  <line x1="8" y1="16" x2="8" y2="16"/>
+                  <line x1="16" y1="16" x2="16" y2="16"/>
+                </svg>
+              </span>
+              <span class="app-sector mono-label">SECTOR 03</span>
+            </div>
+            <h3 class="app-title">Autonomous Robotics</h3>
+            <p class="app-desc">
+              6-Degrees-of-Freedom tactile spatial intelligence. Dexterous robotic manipulation in high-risk environments with zero human supervision.
+            </p>
+            <div class="app-metrics-footer">
+              <div class="app-m-col">
+                <span class="app-m-val">&lt; 1ms</span>
+                <span class="app-m-lbl">TACTILE REFLEX LATENCY</span>
+              </div>
+              <div class="app-m-col">
+                <span class="app-m-val">100%</span>
+                <span class="app-m-lbl">ZERO COLLISION TOLERANCE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 4: Transportation -->
+          <div class="app-card reveal-elem">
+            <div class="app-card-bg-gradient"></div>
+            <div class="app-header">
+              <span class="app-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <polygon points="12 2 19 21 12 17 5 21 12 2"/>
+                </svg>
+              </span>
+              <span class="app-sector mono-label">SECTOR 04</span>
+            </div>
+            <h3 class="app-title">Global Transportation</h3>
+            <p class="app-desc">
+              Decentralized autonomous air and ground transit coordination. Real-time predictive fleet telemetry routing millions of simultaneous vehicles without bottlenecks.
+            </p>
+            <div class="app-metrics-footer">
+              <div class="app-m-col">
+                <span class="app-m-val">42%</span>
+                <span class="app-m-lbl">EMISSIONS REDUCTION</span>
+              </div>
+              <div class="app-m-col">
+                <span class="app-m-val">0.00</span>
+                <span class="app-m-lbl">CONGESTION COEFFICIENT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 5: Scientific Research -->
+          <div class="app-card reveal-elem">
+            <div class="app-card-bg-gradient"></div>
+            <div class="app-header">
+              <span class="app-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <circle cx="12" cy="12" r="9"/>
+                  <ellipse cx="12" cy="12" rx="3" ry="9"/>
+                  <line x1="3" y1="12" x2="21" y2="12"/>
+                </svg>
+              </span>
+              <span class="app-sector mono-label">SECTOR 05</span>
+            </div>
+            <h3 class="app-title">Scientific Discovery</h3>
+            <p class="app-desc">
+              Hypothesis distillation in high-energy physics, astrophysics radio array correlation, and room-temperature superconductor material synthesis.
+            </p>
+            <div class="app-metrics-footer">
+              <div class="app-m-col">
+                <span class="app-m-val">10¹⁸</span>
+                <span class="app-m-lbl">QUANTUM SAMPLES PROCESSED</span>
+              </div>
+              <div class="app-m-col">
+                <span class="app-m-val">14</span>
+                <span class="app-m-lbl">NEW NOVEL MATERIALS DISCOVERED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 6: Business Intelligence -->
+          <div class="app-card reveal-elem">
+            <div class="app-card-bg-gradient"></div>
+            <div class="app-header">
+              <span class="app-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+              </span>
+              <span class="app-sector mono-label">SECTOR 06</span>
+            </div>
+            <h3 class="app-title">Enterprise Intelligence</h3>
+            <p class="app-desc">
+              Macroeconomic volatility stress testing, automated regulatory compliance auditing, and self-optimizing multi-tiered supply chain orchestration.
+            </p>
+            <div class="app-metrics-footer">
+              <div class="app-m-col">
+                <span class="app-m-val">99.98%</span>
+                <span class="app-m-lbl">AUDIT VERIFIABILITY</span>
+              </div>
+              <div class="app-m-col">
+                <span class="app-m-val">&lt; 50ms</span>
+                <span class="app-m-lbl">EQUILIBRIUM ADJUSTMENT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: RESEARCH AND INNOVATION -->
+    <section id="research" class="section-research section-padding" aria-label="Research and Innovation">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 07 — FRONTIER PAPERS
+          </div>
+          <h2 class="section-title reveal-elem">Research & Publications.</h2>
+          <p class="section-lead reveal-elem">
+            Peer-reviewed open science contributions pushing the boundaries of artificial cognitive systems.
+          </p>
+        </div>
+
+        <!-- Research Filter Pills -->
+        <div class="research-filters reveal-elem">
+          <button class="filter-btn active" data-filter="all" data-sound="click">ALL PAPERS (4)</button>
+          <button class="filter-btn" data-filter="architectures" data-sound="click">NEURAL ARCHITECTURES</button>
+          <button class="filter-btn" data-filter="quantum" data-sound="click">QUANTUM-NEURAL</button>
+          <button class="filter-btn" data-filter="alignment" data-sound="click">FORMAL ALIGNMENT</button>
+        </div>
+
+        <!-- Research Paper Cards -->
+        <div class="research-papers-grid">
+          <!-- Paper 1 -->
+          <article class="paper-card reveal-elem" data-category="architectures">
+            <div class="card-glass-specular"></div>
+            <div class="paper-top">
+              <span class="paper-doi mono-label">DOI: 10.1038/SYNAPSE.2026.0418</span>
+              <span class="paper-date mono-label">OCT 2026</span>
+            </div>
+            <h3 class="paper-title">Deterministic Latent Spaces: Eliminating Hallucinations in High-Dimensional Neural Transformers</h3>
+            <p class="paper-abstract">
+              We present a rigorous mathematical framework proving that non-probabilistic geometric constraints on latent manifold manifolds eliminate non-factual token generation while preserving combinatorial reasoning capacity.
+            </p>
+            <div class="paper-authors mono-label">
+              AUTHORS: E. VANCE, M. CHEN, S. THORNE
+            </div>
+            <div class="paper-footer">
+              <button class="btn-read-paper" data-paper="paper-1" data-sound="click">
+                <span>READ ABSTRACT & METRICS</span>
+                <span class="btn-arr">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Paper 2 -->
+          <article class="paper-card reveal-elem" data-category="architectures">
+            <div class="card-glass-specular"></div>
+            <div class="paper-top">
+              <span class="paper-doi mono-label">DOI: 10.1038/SYNAPSE.2026.0312</span>
+              <span class="paper-date mono-label">AUG 2026</span>
+            </div>
+            <h3 class="paper-title">Sub-Millisecond Multimodal Perception in Edge-Constrained High-DoF Robotics</h3>
+            <p class="paper-abstract">
+              An investigation into hardware-native quantized spatiotemporal NeRF engines capable of continuous 240Hz 6-DoF trajectory computation on edge neuromorphic processors under a 12-watt envelope.
+            </p>
+            <div class="paper-authors mono-label">
+              AUTHORS: K. VOSS, J. MERCER, E. VANCE
+            </div>
+            <div class="paper-footer">
+              <button class="btn-read-paper" data-paper="paper-2" data-sound="click">
+                <span>READ ABSTRACT & METRICS</span>
+                <span class="btn-arr">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Paper 3 -->
+          <article class="paper-card reveal-elem" data-category="quantum">
+            <div class="card-glass-specular"></div>
+            <div class="paper-top">
+              <span class="paper-doi mono-label">DOI: 10.1038/SYNAPSE.2026.0205</span>
+              <span class="paper-date mono-label">MAY 2026</span>
+            </div>
+            <h3 class="paper-title">Quantum Harmonic Resonators in Non-Von Neumann Cognitive Architectures</h3>
+            <p class="paper-abstract">
+              Coupling superconducting transmon qubit clusters with analog photonic memristors to achieve instantaneous combinatorial optimization over 10^12 discrete variable permutations.
+            </p>
+            <div class="paper-authors mono-label">
+              AUTHORS: J. MERCER, M. STERLING, M. CHEN
+            </div>
+            <div class="paper-footer">
+              <button class="btn-read-paper" data-paper="paper-3" data-sound="click">
+                <span>READ ABSTRACT & METRICS</span>
+                <span class="btn-arr">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Paper 4 -->
+          <article class="paper-card reveal-elem" data-category="alignment">
+            <div class="card-glass-specular"></div>
+            <div class="paper-top">
+              <span class="paper-doi mono-label">DOI: 10.1038/SYNAPSE.2026.0119</span>
+              <span class="paper-date mono-label">JAN 2026</span>
+            </div>
+            <h3 class="paper-title">Verifiable Alignment: Formal Proof Systems for Autonomous Artificial Superintelligence</h3>
+            <p class="paper-abstract">
+              A foundational thesis proposing constructive mathematical verification invariants that permanently restrict autonomous policy networks to predefined ethical boundaries with mathematical certainty.
+            </p>
+            <div class="paper-authors mono-label">
+              AUTHORS: S. THORNE, E. VANCE, K. VOSS
+            </div>
+            <div class="paper-footer">
+              <button class="btn-read-paper" data-paper="paper-4" data-sound="click">
+                <span>READ ABSTRACT & METRICS</span>
+                <span class="btn-arr">↗</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: TEAM SECTION -->
+    <section id="team" class="section-team section-padding" aria-label="Leadership and Research Team">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 08 — THE ARCHITECTS
+          </div>
+          <h2 class="section-title reveal-elem">Minds Behind the Core.</h2>
+          <p class="section-lead reveal-elem">
+            A multidisciplinary collective of theoretical physicists, neuroscientists, systems architects, and category theorists.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="team-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="team-avatar-wrapper">
+              <div class="avatar-monochrome-art" data-initials="EV">
+                <svg viewBox="0 0 120 120" class="avatar-svg">
+                  <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="1" fill="none"/>
+                  <circle cx="60" cy="50" r="22" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                  <path d="M26 100 C 26 76, 94 76, 94 100" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                  <circle cx="60" cy="50" r="14" stroke="#999" stroke-width="0.8" stroke-dasharray="2 2" fill="none"/>
+                  <circle cx="60" cy="50" r="4" fill="#fff"/>
+                  <line x1="10" y1="60" x2="110" y2="60" stroke="#222" stroke-width="0.5"/>
+                </svg>
+              </div>
+              <span class="team-status-dot" title="Active in Zurich Lab"></span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Elena Vance</h3>
+              <span class="team-role mono-label">CHIEF SCIENTIST & CO-FOUNDER</span>
+              <p class="team-bio">
+                Ex-DeepMind Fellow, PhD MIT. Pioneer in non-Euclidean latent geometry and quantum harmonic neurodynamics with 40+ publications in Nature and Science.
+              </p>
+              <div class="team-meta mono-label">
+                <span>FOCUS: QUANTUM TOPOLOGY</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="team-avatar-wrapper">
+              <div class="avatar-monochrome-art" data-initials="MC">
+                <svg viewBox="0 0 120 120" class="avatar-svg">
+                  <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="1" fill="none"/>
+                  <polygon points="60,28 85,75 35,75" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                  <circle cx="60" cy="58" r="6" fill="#fff"/>
+                  <line x1="30" y1="100" x2="90" y2="100" stroke="#666" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span class="team-status-dot" title="Active in SF Fab"></span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Marcus Chen</h3>
+              <span class="team-role mono-label">VP OF ARCHITECTURE & CO-FOUNDER</span>
+              <p class="team-bio">
+                Former Chief Silicon Architect at leading semiconductor labs. Designed next-gen wafer-scale tensor interconnects achieving 100Tbps inter-die bandwidth.
+              </p>
+              <div class="team-meta mono-label">
+                <span>FOCUS: HARDWARE FABRICS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="team-avatar-wrapper">
+              <div class="avatar-monochrome-art" data-initials="ST">
+                <svg viewBox="0 0 120 120" class="avatar-svg">
+                  <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="1" fill="none"/>
+                  <rect x="42" y="32" width="36" height="36" rx="4" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                  <circle cx="60" cy="50" r="5" fill="#fff"/>
+                  <path d="M30 96 C 30 78, 90 78, 90 96" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                </svg>
+              </div>
+              <span class="team-status-dot" title="Active in Oxford"></span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Sophia Thorne</h3>
+              <span class="team-role mono-label">HEAD OF COGNITIVE ALIGNMENT</span>
+              <p class="team-bio">
+                Chair of Formal Proof Systems at Oxford. Author of the definitive thesis on automated alignment verification for non-stochastic artificial superintelligence.
+              </p>
+              <div class="team-meta mono-label">
+                <span>FOCUS: FORMAL VERIFICATION</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="team-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="team-avatar-wrapper">
+              <div class="avatar-monochrome-art" data-initials="KV">
+                <svg viewBox="0 0 120 120" class="avatar-svg">
+                  <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="1" fill="none"/>
+                  <circle cx="60" cy="48" r="18" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                  <path d="M42 48 L78 48" stroke="#fff" stroke-width="1"/>
+                  <path d="M28 98 C 28 80, 92 80, 92 98" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                </svg>
+              </div>
+              <span class="team-status-dot" title="Active in Tokyo Hub"></span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Kaelen Voss</h3>
+              <span class="team-role mono-label">LEAD, PERCEPTION & ROBOTICS</span>
+              <p class="team-bio">
+                Pioneered sub-millisecond continuous volumetric spatial fields. Led perception research for autonomous Martian exploration robotics teams.
+              </p>
+              <div class="team-meta mono-label">
+                <span>FOCUS: 6-DoF SPATIAL FIELDS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 5 -->
+          <div class="team-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="team-avatar-wrapper">
+              <div class="avatar-monochrome-art" data-initials="MS">
+                <svg viewBox="0 0 120 120" class="avatar-svg">
+                  <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="1" fill="none"/>
+                  <circle cx="60" cy="46" r="16" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                  <path d="M44 46 Q 60 62 76 46" stroke="#fff" stroke-width="1.2" fill="none"/>
+                  <path d="M30 96 C 30 76, 90 76, 90 96" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                </svg>
+              </div>
+              <span class="team-status-dot" title="Active in Berlin Lab"></span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Maya Sterling</h3>
+              <span class="team-role mono-label">DIRECTOR, MULTIMODAL SYNTHESIS</span>
+              <p class="team-bio">
+                World authority on zero-latency acoustic prosody and neural phonetics. Developed algorithms now used in conversational agents across 120 languages.
+              </p>
+              <div class="team-meta mono-label">
+                <span>FOCUS: ACOUSTIC PHONETICS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 6 -->
+          <div class="team-card reveal-elem">
+            <div class="card-glass-specular"></div>
+            <div class="team-avatar-wrapper">
+              <div class="avatar-monochrome-art" data-initials="JM">
+                <svg viewBox="0 0 120 120" class="avatar-svg">
+                  <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="1" fill="none"/>
+                  <polygon points="60,34 78,64 42,64" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                  <circle cx="60" cy="54" r="3" fill="#fff"/>
+                  <circle cx="60" cy="60" r="32" stroke="#555" stroke-dasharray="3 3" fill="none"/>
+                  <path d="M32 98 C 32 82, 88 82, 88 98" stroke="#666" stroke-width="1.5" fill="#141414"/>
+                </svg>
+              </div>
+              <span class="team-status-dot" title="Active in Princeton"></span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Julian Mercer</h3>
+              <span class="team-role mono-label">QUANTUM COMPUTING LIAISON</span>
+              <p class="team-bio">
+                Fellow at Institute for Advanced Study. Specializes in topological quantum error mitigation and hybrid quantum-classical tensor networks.
+              </p>
+              <div class="team-meta mono-label">
+                <span>FOCUS: QUANTUM SIMULATION</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: FAQ / ARCHITECTURAL INQUIRIES -->
+    <section id="faq" class="section-faq section-padding" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 09 — SPECIFICATIONS & FAQ
+          </div>
+          <h2 class="section-title reveal-elem">Technical Inquiries.</h2>
+          <p class="section-lead reveal-elem">
+            Detailed clarity on our deterministic methodology, security guarantees, enterprise integration, and licensing models.
+          </p>
+        </div>
+
+        <div class="faq-accordion reveal-elem">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-sound="click">
+              <span class="faq-num mono-label">01</span>
+              <span class="faq-title">How does SYNAPSE AI eliminate hallucinations mathematically?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Standard autoregressive language models sample from unconstrained probabilistic softmax distributions, inevitably resulting in spurious correlation and semantic drift. SYNAPSE operates with <strong>Bounded Deterministic Manifolds</strong>. Every generated intermediate thought node is validated against a compile-time formal logic theorem prover (Satisfiability Modulo Theories). If an inferred statement lacks an axiomatic derivation path, it is discarded before token realization.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-sound="click">
+              <span class="faq-num mono-label">02</span>
+              <span class="faq-title">Can the SYNAPSE suite run air-gapped on sovereign private infrastructure?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Yes. All four core platforms (VISION, CORE, VOICE, ANALYTICS) are designed for bare-metal deployment on sovereign Kubernetes clusters, custom FPGA arrays, or neuromorphic accelerators. No outbound telemetry or external internet connection is required once weights are verified and compiled.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-sound="click">
+              <span class="faq-num mono-label">03</span>
+              <span class="faq-title">What is the latency threshold for SYNAPSE VISION at 8K resolution?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  On enterprise tensor nodes, SYNAPSE VISION sustains a median 0.12ms inference latency per 8K frame. When coupled with our edge quantization kernels, high-DoF robotics systems achieve continuous 240Hz closed-loop tactile feedback with zero visual frame dropping.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-sound="click">
+              <span class="faq-num mono-label">04</span>
+              <span class="faq-title">How do you ensure alignment in autonomous agentic loops?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  We utilize <strong>Constructive Alignment Invariants</strong>. Instead of post-hoc Reinforcement Learning from Human Feedback (RLHF), safety constraints are baked directly into the loss manifold and execution runtime as hard invariants. An autonomous agent physically cannot execute a plan that violates mathematical safety proofs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-sound="click">
+              <span class="faq-num mono-label">05</span>
+              <span class="faq-title">What programming interfaces and SDKs are supported?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  SYNAPSE provides native SDKs in Rust, C++23, Python 3.12, and Go, alongside high-performance gRPC, WebAssembly (WASM), and zero-copy shared memory IPC primitives for maximum throughput and minimum serialization overhead.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: CONTACT & INQUIRIES SECTION -->
+    <section id="contact" class="section-contact section-padding" aria-label="Contact and Research Collaboration">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag mono-label">
+            <span class="tag-hash">//</span> 10 — INITIATE PROTOCOL
+          </div>
+          <h2 class="section-title reveal-elem">Contact the Laboratory.</h2>
+          <p class="section-lead reveal-elem">
+            Request enterprise node provisioning, initiate research collaboration, or discuss institutional partnership.
+          </p>
+        </div>
+
+        <div class="contact-wrapper reveal-elem">
+          <!-- Left: Lab Info & Encrypted Transmission Specs -->
+          <div class="contact-telemetry">
+            <div class="telemetry-box">
+              <span class="mono-label">RESEARCH HEADQUARTERS</span>
+              <h3 class="box-title">Synapse AI Research Facility</h3>
+              <p class="box-text">
+                Department of Advanced Machine Cognition<br>
+                400 Quantum Way, Suite 800<br>
+                San Francisco, CA 94107
+              </p>
+            </div>
+
+            <div class="telemetry-box">
+              <span class="mono-label">DISPATCH TELEMETRY</span>
+              <div class="contact-meta-list mono-label">
+                <div class="meta-row">
+                  <span>PUBLIC KEY ID:</span>
+                  <span class="meta-val">0x9F4C2...B18A</span>
+                </div>
+                <div class="meta-row">
+                  <span>CIPHER SUITE:</span>
+                  <span class="meta-val">AES-256-GCM / SHA-512</span>
+                </div>
+                <div class="meta-row">
+                  <span>RESPONSE WINDOW:</span>
+                  <span class="meta-val">&lt; 4 HOURS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="telemetry-box simulation-badge">
+              <span class="status-indicator"></span>
+              <span class="mono-label">SIMULATION DISCLOSURE</span>
+              <p class="disclaimer-text">
+                This is a simulated frontend demonstration contact form. Inquiries are validated and logged locally within this active test session.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Validated Contact Form -->
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Name -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label mono-label">FULL NAME *</label>
+                <input 
+                  type="text" 
+                  id="contact-name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="Dr. Evelyn Wright" 
+                  required
+                >
+                <span class="form-error" id="name-error">Please specify your full name.</span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label mono-label">INSTITUTIONAL / WORK EMAIL *</label>
+                <input 
+                  type="email" 
+                  id="contact-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="evelyn.wright@institution.org" 
+                  required
+                >
+                <span class="form-error" id="email-error">Please provide a valid institutional email address.</span>
+              </div>
+
+              <!-- Subject / Classification -->
+              <div class="form-group">
+                <label for="contact-subject" class="form-label mono-label">INQUIRY CLASSIFICATION *</label>
+                <select id="contact-subject" name="subject" class="form-select" required>
+                  <option value="" disabled selected>Select Ingestion Category...</option>
+                  <option value="research">Academic & Research Collaboration</option>
+                  <option value="enterprise">Enterprise Core Architecture License</option>
+                  <option value="quantum">Quantum-Neural Testbed Access</option>
+                  <option value="media">Institutional Media & Inquiries</option>
+                </select>
+                <span class="form-error" id="subject-error">Please select an inquiry category.</span>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label mono-label">TRANSMISSION PAYLOAD *</label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  rows="4" 
+                  class="form-textarea" 
+                  placeholder="Outline computational requirements, cluster nodes, or research hypothesis..."
+                  required
+                ></textarea>
+                <div class="textarea-footer">
+                  <span class="form-error" id="message-error">Payload message must be at least 20 characters.</span>
+                  <span class="char-counter mono-label" id="char-counter">0 / 1000</span>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="contact-submit-btn" class="btn-primary form-submit-btn" data-sound="click">
+                <span class="btn-shine"></span>
+                <span class="btn-text" id="submit-btn-text">TRANSMIT ENCRYPTED PAYLOAD</span>
+                <span class="btn-icon-arrow">→</span>
+              </button>
+
+              <!-- Live Submission Feedback Banner -->
+              <div id="form-feedback" class="form-feedback" role="alert" aria-hidden="true">
+                <div class="feedback-icon">✓</div>
+                <div class="feedback-body">
+                  <h4 class="feedback-title" id="feedback-title">TRANSMISSION CONFIRMED</h4>
+                  <p class="feedback-desc" id="feedback-desc">Payload encrypted via SHA-512 and verified on local testbed.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="site-footer" aria-label="Site Footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-icon">
+              <svg viewBox="0 0 36 36" fill="none">
+                <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                <polygon points="18,8 27,24 9,24" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <circle cx="18" cy="18" r="3.5" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="logo-text">SYNAPSE<span class="logo-accent">AI</span></span>
+          </div>
+          <p class="footer-mission">
+            The future of artificial cognition engineered with mathematical determinism, sub-millisecond perception, and verifiable alignment.
+          </p>
+          <div class="footer-status-tag mono-label">
+            <span class="status-indicator"></span> ALL SYSTEMS OPERATIONAL // REV 4.2
+          </div>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4 class="footer-col-title mono-label">PLATFORMS</h4>
+            <ul>
+              <li><a href="#products" class="footer-link">SYNAPSE VISION</a></li>
+              <li><a href="#products" class="footer-link">SYNAPSE CORE</a></li>
+              <li><a href="#products" class="footer-link">SYNAPSE VOICE</a></li>
+              <li><a href="#products" class="footer-link">SYNAPSE ANALYTICS</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title mono-label">RESEARCH</h4>
+            <ul>
+              <li><a href="#research" class="footer-link">Deterministic Manifolds</a></li>
+              <li><a href="#research" class="footer-link">Hyperbolic Latents</a></li>
+              <li><a href="#research" class="footer-link">Quantum Harmonic Cores</a></li>
+              <li><a href="#research" class="footer-link">Formal Alignment</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title mono-label">LABORATORY</h4>
+            <ul>
+              <li><a href="#about" class="footer-link">Founding Philosophy</a></li>
+              <li><a href="#team" class="footer-link">Research Fellows</a></li>
+              <li><a href="#interactive-demo" class="footer-link">Emulator Console</a></li>
+              <li><a href="#contact" class="footer-link">Initiate Protocol</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright mono-label">
+          © 2026 SYNAPSE AI RESEARCH LABORATORY. ALL RIGHTS RESERVED. NON-COMMERCIAL FICTIONAL DEMONSTRATION.
+        </div>
+        <div class="footer-actions">
+          <button id="back-to-top" class="btn-back-to-top mono-label" title="Return to Top" data-sound="click">
+            <span>BACK TO APEX</span>
+            <span class="top-arrow">↑</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DEEP DIVE MODAL -->
+  <div id="product-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-category mono-label" id="modal-category">PLATFORM // SPECIFICATION</span>
+          <h3 class="modal-title" id="modal-title">SYNAPSE VISION</h3>
+        </div>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Specification Modal" data-sound="click">
+          ✕
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-grid">
+          <div class="modal-column-left">
+            <div class="modal-canvas-frame">
+              <canvas id="modal-interactive-canvas" class="modal-canvas"></canvas>
+              <div class="canvas-tag mono-label" id="modal-canvas-tag">LIVE VOLUMETRIC BUFFER</div>
+            </div>
+            <div class="modal-quick-stats" id="modal-stats-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+          <div class="modal-column-right">
+            <h4 class="modal-section-h">ARCHITECTURAL OVERVIEW</h4>
+            <p class="modal-desc-text" id="modal-long-desc">
+              Detailed architectural explanation loads dynamically.
+            </p>
+
+            <h4 class="modal-section-h">BENCHMARK PERFORMANCE</h4>
+            <div class="modal-benchmark-bar">
+              <div class="bench-label">
+                <span>Inference Acceleration</span>
+                <span id="modal-bench-val">12x Industry Baseline</span>
+              </div>
+              <div class="bench-track">
+                <div class="bench-fill" id="modal-bench-bar" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <h4 class="modal-section-h">SAMPLE SYSTEM CALL // REST / gRPC</h4>
+            <pre class="modal-code-block mono-label"><code id="modal-code-snippet">// Ingestion API Call
+const client = new SynapseVision({ latency: "sub-millisecond" });
+const frameBuffer = await sensorArray.captureVolumetric();
+const inference = await client.predictTrajectory(frameBuffer, {
+  fidelity: 0.9999,
+  coordinateSpace: "Poincare-Hyperbolic"
+});</code></pre>
+
+            <div class="modal-actions-row">
+              <button class="btn-primary modal-action-btn" id="modal-action-btn" data-sound="click">
+                <span>PROVISION TEST CLUSTER</span>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESEARCH ABSTRACT MODAL -->
+  <div id="paper-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container paper-modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-category mono-label" id="paper-modal-doi">DOI: 10.1038/SYNAPSE.2026.0418</span>
+          <h3 class="modal-title" id="paper-modal-title">Paper Title</h3>
+        </div>
+        <button id="paper-modal-close-btn" class="modal-close-btn" aria-label="Close Abstract Modal" data-sound="click">
+          ✕
+        </button>
+      </div>
+      <div class="modal-body paper-modal-body">
+        <div class="paper-meta-strip mono-label" id="paper-modal-meta">
+          <span>DATE: OCT 2026</span> • <span>PEER REVIEW: VERIFIED</span> • <span>CITATIONS: 142</span>
+        </div>
+        <div class="paper-authors-list mono-label" id="paper-modal-authors">
+          AUTHORS: DR. ELENA VANCE, MARCUS CHEN, DR. SOPHIA THORNE
+        </div>
+        <hr class="paper-hr">
+        <h4 class="modal-section-h">FULL ABSTRACT</h4>
+        <div class="paper-full-text" id="paper-modal-text">
+          <!-- Dynamically populated -->
+        </div>
+        <div class="paper-key-findings">
+          <h4 class="modal-section-h">PROVEN COROLLARIES</h4>
+          <ul id="paper-modal-findings" class="paper-findings-list">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+        <div class="paper-actions-bar">
+          <button class="btn-secondary" id="paper-download-btn" data-sound="click">
+            <span>DOWNLOAD SIMULATED PDF</span>
+            <span>↓</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
