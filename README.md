@@ -1,5 +1,6 @@
 # SYNAPSE AI — The Future of Intelligence
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhrusheekesh28%2Fsynapse-ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-white.svg)](https://opensource.org/licenses/MIT)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -8,6 +9,16 @@
 
 > **"Intelligence, Reimagined."**  
 > Official digital experience for **SYNAPSE AI** — an advanced artificial intelligence research laboratory pioneering deterministic reasoning, multimodal cognition, and next-generation neural architectures.
+
+---
+
+## 🌐 Deploy to Vercel
+
+Deploy your own live instance of SYNAPSE AI to Vercel with zero configuration:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhrusheekesh28%2Fsynapse-ai)
+
+Or visit: [https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhrusheekesh28%2Fsynapse-ai](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhrusheekesh28%2Fsynapse-ai)
 
 ---
 
@@ -33,8 +44,8 @@ SYNAPSE AI presents a cinematic, minimalist, and monochromatic digital interface
 
 No dependencies or build steps required. Simply clone and run!
 
-### Method 1: Direct File Opening
-Double-click `index.html` to open directly in any modern browser.
+### Method 1: Deploy with Vercel
+Click the deploy button above to launch instantly on Vercel's Edge Network.
 
 ### Method 2: Local HTTP Server (Node.js)
 ```bash
@@ -52,6 +63,7 @@ synapse-ai/
 ├── style.css         # Monochromatic design system, glassmorphism & typography
 ├── script.js         # WebGL shader engine, Canvas visualizers & interactive logic
 ├── server.js         # Zero-dependency local development server
+├── vercel.json       # Vercel deployment configuration
 ├── assets/           # Supporting static assets
 └── README.md         # Project documentation
 ```
